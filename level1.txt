@@ -1,77 +1,147 @@
+### 1. What is React?
 
-1. **Explain what React is and its key features.**
-   - React is a JavaScript library for building user interfaces.
-   - Key features include a virtual DOM for efficient updates, component-based architecture, and a declarative approach to building UIs.
+**Question 1:** What is React?
 
-2. **What is JSX in React, and why is it used?**
-   - JSX is a syntax extension for JavaScript used with React.
-   - It allows writing HTML-like code in JavaScript, making it more readable and expressive.
+**Answer:** React is a JavaScript library for building user interfaces, developed and maintained by Facebook. It allows developers to build reusable UI components that update efficiently and automatically manage the DOM (Document Object Model) to enhance application performance.
 
-3. **Differentiate between functional components and class components in React.**
-   - Functional components are simple functions returning UI elements.
-   - Class components are ES6 classes extending `React.Component` and can manage state and lifecycle methods.
+**Question 2:** What are the key features of React?
 
-4. **What is the significance of state in React? How do you manage state in a functional component?**
-   - State holds data that can change over time, and React components can rerender based on state changes.
-   - In functional components, state is managed using the `useState` hook.
+**Answer:** 
+- **Components:** React applications are built using components, which are self-contained, reusable pieces of code.
+- **Virtual DOM:** React uses a virtual DOM to efficiently update and render changes to the actual DOM.
+- **Declarative Syntax:** React uses a declarative syntax, making it more predictable and easier to understand.
+- **One-way Data Binding:** Data flows in a unidirectional manner, making it easier to trace and manage.
 
-5. **Describe the lifecycle methods of a class component in React.**
-   - Mounting: `constructor`, `render`, `componentDidMount`.
-   - Updating: `render`, `componentDidUpdate`.
-   - Unmounting: `componentWillUnmount`.
+### 2. Working of DOM
 
-6. **What is the purpose of `setState` in React, and why should it be used instead of modifying state directly?**
-   - `setState` is used to update component state.
-   - It ensures proper asynchronous state updates and triggers a re-render.
+**Question 3:** Explain the working of the DOM (Document Object Model).
 
-7. **Explain the concept of props in React.**
-   - Props (short for properties) are inputs to React components.
-   - They allow the passing of data from a parent to a child component.
+**Answer:** The DOM is a programming interface for web documents. When a web page is loaded, the browser creates a DOM representation of the HTML. It forms a tree-like structure where each element is a node. JavaScript can manipulate the DOM, updating its structure and content dynamically, which then reflects changes on the web page.
 
-8. **How does data flow in React?**
-   - Data flows unidirectionally in React, from parent to child components through props.
+**Question 4:** How does the virtual DOM work in React?
 
-9. **What is the virtual DOM, and how does it contribute to the performance of React applications?**
-   - The virtual DOM is a lightweight copy of the actual DOM.
-   - React uses it to minimize direct manipulation of the actual DOM, improving performance by batching and efficiently updating changes.
+**Answer:** React's virtual DOM is a lightweight copy of the real DOM. When changes occur in a React application, React first updates the virtual DOM. It then compares the virtual DOM with the real DOM and calculates the most efficient way to update the actual DOM. This process minimizes direct manipulation of the real DOM, improving performance.
 
-10. **What are React hooks, and why were they introduced in React 16.8? Provide examples of commonly used hooks.**
-    - React hooks are functions that allow functional components to have state and lifecycle features.
-    - Examples include `useState`, `useEffect`, and `useContext`.
+### 3. Problems with JS
 
-11. **What is the significance of the `key` prop in React?**
-    - The `key` prop helps React identify which items have changed, added, or removed in a list, aiding in efficient rendering and updating.
+**Question 5:** What are some common problems with traditional JavaScript development?
 
-12. **How does conditional rendering work in React? Provide examples.**
-    - Conditional rendering involves using `if` statements or ternary operators to decide what to render.
-    - Example: `{condition ? <ComponentA /> : <ComponentB />}`.
+**Answer:** 
+- **Global Scope:** Variables declared globally can lead to naming conflicts and unintended side effects.
+- **Callback Hell:** Nested callbacks can make code hard to read and maintain.
+- **Lack of Structure:** Without a clear structure, managing larger applications becomes challenging.
+- **Inefficient DOM Manipulation:** Direct manipulation of the DOM can be inefficient, especially for frequent updates.
 
-13. **What is React Router, and how is it used for navigation in a React application?**
-    - React Router is a library for handling navigation in React applications.
-    - It provides components like `BrowserRouter` and `Link` for creating navigational components.
+**Question 6:** How does React address the issues with traditional JavaScript?
 
-14. **Explain the purpose of the `map` function in the context of React components.**
-    - The `map` function is used to iterate over an array and create a new array of React elements based on the original array.
+**Answer:** React addresses these issues by introducing a component-based architecture, a virtual DOM for efficient updates, and a declarative syntax that provides a clearer and more structured way to build applications.
 
-15. **What are higher-order components (HOCs) in React, and why might you use them?**
-    - HOCs are functions that take a component and return a new component with enhanced functionality.
-    - They are used for code reuse, logic abstraction, and prop manipulation.
+### 4. Working of React
 
-16. **What is the role of the `shouldComponentUpdate` method, and when would you use it?**
-    - `shouldComponentUpdate` allows developers to optimize rendering by preventing unnecessary re-renders.
-    - It returns a boolean indicating whether the component should update.
+**Question 7:** Explain the lifecycle methods in a React component.
 
-17. **Explain the concept of controlled components in React forms.**
-    - Controlled components have their state controlled by React, typically using state and callbacks to manage form input values.
+**Answer:** React components go through various lifecycle phases, including mounting, updating, and unmounting. Key methods include `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`, allowing developers to execute code at specific points in a component's lifecycle.
 
-18. **What is the Context API in React, and when would you use it?**
-    - The Context API provides a way to share values (like themes or user authentication) across the component tree without prop drilling.
-    - It is useful when many components need the same data.
+**Question 8:** How does React handle state management?
 
-19. **How does error handling work in React applications?**
-    - React components can use error boundaries to catch JavaScript errors anywhere in their component tree.
-    - Error boundaries are components with a special lifecycle method called `componentDidCatch`.
+**Answer:** React components have a `state` object that represents the current state of the component. When the state changes, React efficiently updates only the components affected by the change, ensuring a smooth and performant user interface.
 
-20. **What are React fragments, and why are they useful?**
-    - React fragments are used to group multiple children without adding extra nodes to the DOM.
-    - They improve code readability and structure without affecting the layout.
+### 5. JS Vs React
+
+**Question 9:** What are the key differences between JavaScript and React?
+
+**Answer:**
+- **JavaScript:** A programming language used for general-purpose scripting. 
+- **React:** A JavaScript library for building user interfaces, specifically focused on UI components and their interactions.
+
+**Question 10:** How does React differ from other JavaScript frameworks?
+
+**Answer:** React focuses on building UI components and efficiently updating the DOM, while some frameworks, like Angular, provide a more comprehensive solution, including features for data binding, dependency injection, and more.
+
+### 6. Intro to Components
+
+**Question 11:** What is a React component?
+
+**Answer:** A React component is a reusable, self-contained piece of code that encapsulates a specific piece of UI functionality. Components can be composed to build complex user interfaces.
+
+**Question 12:** How do you create a functional component in React?
+
+**Answer:** 
+```jsx
+// Functional Component
+import React from 'react';
+
+const MyComponent = () => {
+  return <div>Hello, I'm a functional component!</div>;
+};
+```
+
+**Question 13:** What is a class component in React?
+
+**Answer:** A class component in React is a JavaScript class that extends `React.Component`. It can hold and manage local state and has access to lifecycle methods.
+
+**Question 14:** What is the significance of the `render` method in a React component?
+
+**Answer:** The `render` method defines what should be displayed on the UI. It returns React elements that represent the structure of the component.
+
+**Question 15:** How do you pass data from a parent component to a child component in React?
+
+**Answer:** Data can be passed from a parent to a child component through props. Here's an example:
+
+```jsx
+// Parent Component
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+const Parent = () => {
+  const data = "Hello from Parent!";
+  return <ChildComponent message={data} />;
+};
+
+// Child Component
+const ChildComponent = ({ message }) => {
+  return <p>{message}</p>;
+};
+```
+
+**Question 16:** Explain the concept of state in a React component.
+
+**Answer:** State is a JavaScript object used to represent the current condition of a component. It can be modified using the `setState` method, triggering a re-render and updating the UI.
+
+**Question 17:** Differentiate between props and state in React.
+
+**Answer:**
+- **Props:** Immutable, passed from parent to child. Used for communication between components.
+- **State:** Mutable, managed internally within a component. Used for managing component-specific data.
+
+**Question 18:** How can you handle events in React?
+
+**Answer:** Events in React are handled by providing a callback function. For example:
+
+```jsx
+// Event Handling
+import React, { useState } from 'react';
+
+const MyComponent = () => {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+};
+```
+
+**Question 19:** What is conditional rendering in React?
+
+**Answer:** Conditional rendering involves displaying different components or content based on certain conditions or states within a React component.
+
+**Question 20:** How does React help with code reusability?
+
+**Answer:** React promotes code reusability through the use of components. Components can be reused across different parts of an application, improving maintainability and reducing redundancy.
