@@ -1,4 +1,3 @@
-Certainly! Here are 20 important questions covering the topics of file extensions, class vs. function components, JSX, exporting components, other important points, dynamic components, and reusable components:
 
 ### File Extensions:
 
