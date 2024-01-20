@@ -1,0 +1,87 @@
+Certainly! Here are 20 important questions covering the topics of file extensions, class vs. function components, JSX, exporting components, other important points, dynamic components, and reusable components:
+
+### File Extensions:
+
+1. **What file extensions are commonly used for React components?**
+   - *Answer:* Common file extensions include `.js` for JavaScript files, `.jsx` for JSX files, and `.css` for stylesheets.
+
+2. **Can you use a different file extension for React components? If yes, provide an example.**
+   - *Answer:* Yes, you can use a different file extension. For example, `.tsx` for TypeScript with JSX.
+
+### Class vs. Function Components:
+
+3. **What is the primary difference between class and function components in React?**
+   - *Answer:* Class components are traditional, use `class` syntax, and can manage local state and lifecycle methods. Function components are simpler, use `function` syntax, and rely on hooks for state and lifecycle management.
+
+4. **In which scenarios would you prefer using a class component over a function component?**
+   - *Answer:* Class components are preferred when you need local state, lifecycle methods, or if you're working with older React codebases that don't use hooks extensively.
+
+### JSX:
+
+5. **What is JSX, and why is it commonly used in React?**
+   - *Answer:* JSX (JavaScript XML) is a syntax extension for JavaScript. It allows you to write HTML-like code in JavaScript, making React component structure more readable.
+
+6. **Can you write a React component without using JSX? Provide an example.**
+   - *Answer:* Yes, you can write a React component without JSX. Example:
+     ```jsx
+     // Without JSX
+     import React from 'react';
+
+     const MyComponent = () => {
+       return React.createElement('div', null, 'Hello, I\'m a component!');
+     };
+     ```
+
+### Exporting Components:
+
+7. **How do you export a React component?**
+   - *Answer:* Components can be exported using `export default` or named exports (`export { MyComponent }`).
+
+8. **Explain the purpose of named exports in React.**
+   - *Answer:* Named exports allow exporting multiple values from a single file, facilitating modular code organization.
+
+### Other Important Points:
+
+9. **What is the significance of keys in React lists, and why are they important?**
+   - *Answer:* Keys are used to optimize list rendering. They help React identify changes, additions, or removals in a list.
+
+10. **How can you conditionally apply styles in React components?**
+    - *Answer:* Styles can be conditionally applied using inline styles or by dynamically assigning class names based on conditions.
+
+### Dynamic Components:
+
+11. **How do you dynamically render components in React?**
+    - *Answer:* Components can be dynamically rendered based on conditions or data using JavaScript expressions within JSX or mapping over an array of data.
+
+12. **What is the role of the `render` method in a React component?**
+    - *Answer:* The `render` method defines what should be displayed on the UI. It returns React elements that represent the structure of the component.
+
+### Reusable Components:
+
+13. **What makes a React component reusable, and how can you achieve reusability?**
+    - *Answer:* Reusable components should be independent of specific data and customizable through props. Achieve reusability by designing components with flexibility in mind.
+
+14. **How can you pass data between parent and child components in React?**
+    - *Answer:* Data can be passed from a parent to a child component through props.
+
+### Advanced React Concepts:
+
+15. **What is the virtual DOM in React, and how does it improve performance?**
+    - *Answer:* The virtual DOM is a lightweight copy of the real DOM. React uses it to efficiently update and render changes to the actual DOM, improving performance.
+
+16. **How can you dynamically import components in React?**
+    - *Answer:* Dynamic imports can be achieved using the `import()` function or React's `lazy` and `Suspense` for code-splitting and lazy-loading components.
+
+### Miscellaneous:
+
+17. **Explain the importance of CSS Modules in a React project.**
+    - *Answer:* CSS Modules provide local scoping for styles, preventing naming conflicts and making it easier to manage styles in large projects.
+
+18. **What are some common practices for passing data between sibling components in React?**
+    - *Answer:* Data between sibling components can be passed by lifting state up to a common ancestor or using a state management library like Redux.
+
+19. **How can you conditionally apply styles in React components?**
+    - *Answer:* Styles can be conditionally applied using inline styles or by dynamically assigning class names based on conditions.
+
+20. **What are React hooks, and why are they important for functional components?**
+    - *Answer:* React hooks are functions that allow functional components to use state and lifecycle features. They simplify component logic and promote reusability.
